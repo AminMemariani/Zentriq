@@ -17,7 +17,9 @@ import '../../lib/domain/entities/wallet.dart';
 import '../../lib/domain/entities/token.dart';
 import '../../lib/domain/entities/project.dart';
 import '../../lib/domain/entities/news_article.dart';
+import '../../lib/domain/entities/transaction.dart';
 import '../../lib/core/utils/result.dart';
+import '../../lib/core/errors/failures.dart';
 
 // Generate mocks for all repositories and use cases
 @GenerateMocks([
@@ -125,4 +127,48 @@ class MockData {
       ),
     ];
   }
+}
+
+// Provide dummy values for Result types
+void provideDummy<T>(T dummyValue) {
+  // This is handled by mockito automatically
+}
+
+// Provide dummy values for all Result types used in tests
+void provideDummyValues() {
+  provideDummy<Result<Wallet>>(Result.success(Wallet(
+    address: 'dummy',
+    balance: 0.0,
+    balanceInUSD: 0.0,
+    name: 'Dummy Wallet',
+  )));
+  
+  provideDummy<Result<List<Transaction>>>(Result.success([]));
+  
+  provideDummy<Result<Transaction>>(Result.success(Transaction(
+    id: 'dummy',
+    type: TransactionType.send,
+    amount: 0.0,
+    fromAddress: 'dummy',
+    toAddress: 'dummy',
+    timestamp: DateTime.now(),
+    status: TransactionStatus.completed,
+  )));
+  
+  provideDummy<Result<List<Token>>>(Result.success([]));
+  
+  provideDummy<Result<List<Project>>>(Result.success([]));
+  
+  provideDummy<Result<List<NewsArticle>>>(Result.success([]));
+  
+  provideDummy<Result<String>>(Result.success('dummy'));
+  
+  // Provide dummy failure results
+  provideDummy<Result<Wallet>>(Result.failure(ServerFailure('dummy')));
+  provideDummy<Result<List<Transaction>>>(Result.failure(NetworkFailure('dummy')));
+  provideDummy<Result<Transaction>>(Result.failure(ValidationFailure('dummy')));
+  provideDummy<Result<List<Token>>>(Result.failure(ServerFailure('dummy')));
+  provideDummy<Result<List<Project>>>(Result.failure(NetworkFailure('dummy')));
+  provideDummy<Result<List<NewsArticle>>>(Result.failure(ServerFailure('dummy')));
+  provideDummy<Result<String>>(Result.failure(ValidationFailure('dummy')));
 }
