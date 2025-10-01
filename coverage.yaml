@@ -1,0 +1,42 @@
+# Coverage configuration for Zentriq
+# This file defines which files should be included/excluded from coverage reports
+
+# Files to exclude from coverage
+exclude:
+  # Generated files
+  - "**/*.g.dart"
+  - "**/*.freezed.dart"
+  - "**/*.mocks.dart"
+  
+  # Main entry points (not typically unit tested)
+  - "lib/main.dart"
+  
+  # Constants and enums (mostly static)
+  - "lib/core/constants/app_constants.dart"
+  - "lib/core/constants/app_enums.dart"
+  - "lib/core/constants/navigation_constants.dart"
+  - "lib/core/constants/app_colors.dart"
+  
+  # Models (mostly data classes)
+  - "lib/data/models/*.dart"
+  - "lib/domain/entities/*.dart"
+  
+  # Services (integration testing would be more appropriate)
+  - "lib/data/services/*.dart"
+  
+  # Repository implementations (integration testing)
+  - "lib/data/repositories/*_impl.dart"
+  
+  # UI screens (widget testing would be more appropriate)
+  - "lib/views/screens/*.dart"
+  
+  # Widgets (widget testing would be more appropriate)
+  - "lib/views/widgets/*.dart"
+
+# Focus coverage on business logic
+include:
+  - "lib/viewmodels/*.dart"
+  - "lib/domain/usecases/*.dart"
+  - "lib/core/viewmodels/*.dart"
+  - "lib/core/design/*.dart"
+  - "lib/core/utils/*.dart"
