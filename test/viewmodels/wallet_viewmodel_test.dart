@@ -4,9 +4,6 @@ import 'package:zentriq/core/errors/failures.dart';
 import 'package:zentriq/core/utils/result.dart';
 import 'package:zentriq/domain/entities/transaction.dart';
 import 'package:zentriq/domain/entities/wallet.dart';
-import 'package:zentriq/domain/usecases/get_transaction_history.dart';
-import 'package:zentriq/domain/usecases/get_wallet.dart';
-import 'package:zentriq/domain/usecases/send_transaction.dart';
 import 'package:zentriq/viewmodels/wallet_viewmodel.dart';
 
 import '../mocks/mock_repositories.mocks.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import '../../lib/core/utils/result.dart';
-import '../../lib/core/errors/failures.dart' as failures;
+import 'package:zentriq/core/utils/result.dart';
+import 'package:zentriq/core/errors/failures.dart' as failures;
 
 /// Test helper utilities for ViewModel testing
 class TestHelpers {

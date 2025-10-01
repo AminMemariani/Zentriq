@@ -1,25 +1,24 @@
-import 'package:mockito/mockito.dart';
 import 'package:mockito/annotations.dart';
-import '../../lib/domain/repositories/wallet_repository.dart';
-import '../../lib/domain/repositories/token_repository.dart';
-import '../../lib/domain/repositories/project_repository.dart';
-import '../../lib/domain/repositories/news_repository.dart';
-import '../../lib/domain/usecases/get_wallet.dart';
-import '../../lib/domain/usecases/get_transaction_history.dart';
-import '../../lib/domain/usecases/send_transaction.dart';
-import '../../lib/domain/usecases/get_all_tokens.dart';
-import '../../lib/domain/usecases/get_top_performers.dart';
-import '../../lib/domain/usecases/get_all_projects.dart';
-import '../../lib/domain/usecases/get_featured_projects.dart';
-import '../../lib/domain/usecases/get_latest_news.dart';
-import '../../lib/domain/usecases/get_trending_news.dart';
-import '../../lib/domain/entities/wallet.dart';
-import '../../lib/domain/entities/token.dart';
-import '../../lib/domain/entities/project.dart';
-import '../../lib/domain/entities/news_article.dart';
-import '../../lib/domain/entities/transaction.dart';
-import '../../lib/core/utils/result.dart';
-import '../../lib/core/errors/failures.dart';
+import 'package:zentriq/domain/repositories/wallet_repository.dart';
+import 'package:zentriq/domain/repositories/token_repository.dart';
+import 'package:zentriq/domain/repositories/project_repository.dart';
+import 'package:zentriq/domain/repositories/news_repository.dart';
+import 'package:zentriq/domain/usecases/get_wallet.dart';
+import 'package:zentriq/domain/usecases/get_transaction_history.dart';
+import 'package:zentriq/domain/usecases/send_transaction.dart';
+import 'package:zentriq/domain/usecases/get_all_tokens.dart';
+import 'package:zentriq/domain/usecases/get_top_performers.dart';
+import 'package:zentriq/domain/usecases/get_all_projects.dart';
+import 'package:zentriq/domain/usecases/get_featured_projects.dart';
+import 'package:zentriq/domain/usecases/get_latest_news.dart';
+import 'package:zentriq/domain/usecases/get_trending_news.dart';
+import 'package:zentriq/domain/entities/wallet.dart';
+import 'package:zentriq/domain/entities/token.dart';
+import 'package:zentriq/domain/entities/project.dart';
+import 'package:zentriq/domain/entities/news_article.dart';
+import 'package:zentriq/domain/entities/transaction.dart';
+import 'package:zentriq/core/utils/result.dart';
+import 'package:zentriq/core/errors/failures.dart';
 
 // Generate mocks for all repositories and use cases
 @GenerateMocks([

@@ -3,8 +3,6 @@ import 'package:mockito/mockito.dart';
 import 'package:zentriq/core/errors/failures.dart';
 import 'package:zentriq/core/utils/result.dart';
 import 'package:zentriq/domain/entities/project.dart';
-import 'package:zentriq/domain/usecases/get_all_projects.dart';
-import 'package:zentriq/domain/usecases/get_featured_projects.dart';
 import 'package:zentriq/viewmodels/ecosystem_viewmodel.dart';
 
 import '../mocks/mock_repositories.mocks.dart';

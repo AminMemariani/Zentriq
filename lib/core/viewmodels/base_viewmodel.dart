@@ -170,12 +170,14 @@ abstract class Result<T> {
 
 /// Successful result
 class Success<T> extends Result<T> {
+  @override
   final T data;
   const Success(this.data);
 }
 
 /// Failed result
 class Failure<T> extends Result<T> {
+  @override
   final failures.Failure failure;
   const Failure(this.failure);
 }

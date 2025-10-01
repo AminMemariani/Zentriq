@@ -3,8 +3,6 @@ import 'package:mockito/mockito.dart';
 import 'package:zentriq/core/errors/failures.dart';
 import 'package:zentriq/core/utils/result.dart';
 import 'package:zentriq/domain/entities/news_article.dart';
-import 'package:zentriq/domain/usecases/get_latest_news.dart';
-import 'package:zentriq/domain/usecases/get_trending_news.dart';
 import 'package:zentriq/viewmodels/news_viewmodel.dart';
 
 import '../mocks/mock_repositories.mocks.dart';

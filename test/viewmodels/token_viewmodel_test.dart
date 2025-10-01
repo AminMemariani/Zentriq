@@ -3,8 +3,6 @@ import 'package:mockito/mockito.dart';
 import 'package:zentriq/core/errors/failures.dart';
 import 'package:zentriq/core/utils/result.dart';
 import 'package:zentriq/domain/entities/token.dart';
-import 'package:zentriq/domain/usecases/get_all_tokens.dart';
-import 'package:zentriq/domain/usecases/get_top_performers.dart';
 import 'package:zentriq/viewmodels/token_viewmodel.dart';
 
 import '../mocks/mock_repositories.mocks.dart';
