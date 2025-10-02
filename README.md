@@ -1,18 +1,33 @@
 # Zentriq 🚀
 
-[![Tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)](https://github.com/AminMemariani/Zentriq)
-[![Coverage](https://img.shields.io/badge/coverage-19.8%25-red)](https://github.com/AminMemariani/Zentriq)
+[![Tests](https://img.shields.io/badge/tests-84%20passing-brightgreen)](https://github.com/AminMemariani/Zentriq)
+[![Coverage](https://img.shields.io/badge/coverage-26.2%25-red)](https://github.com/AminMemariani/Zentriq)
 [![Business Logic Coverage](https://img.shields.io/badge/business%20logic%20coverage-51.7%25-yellow)](https://github.com/AminMemariani/Zentriq)
 [![Flutter](https://img.shields.io/badge/Flutter-3.24.0-blue)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.5.0-blue)](https://dart.dev)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/AminMemariani/Zentriq/blob/main/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android%20%7C%20Web%20%7C%20macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)](https://flutter.dev)
-[![Architecture](https://img.shields.io/badge/architecture-MVVM-purple)](https://github.com/AminMemariani/Zentriq)
-[![State Management](https://img.shields.io/badge/state%20management-Provider-orange)](https://pub.dev/packages/provider)
 
 **Zentriq** is a comprehensive Flutter application designed for the Algorand blockchain ecosystem. It serves as a unified platform for managing digital assets, exploring DeFi opportunities, and staying informed about the latest developments in the Algorand network.
 
 Built with modern software engineering practices, Zentriq combines clean architecture principles with comprehensive testing to deliver a robust, scalable, and maintainable application that works seamlessly across all major platforms.
+
+## 🆕 Recent Updates
+
+### **Testing & Quality Improvements**
+- ✅ **Comprehensive Model Testing**: Added 100% test coverage for all data models
+- ✅ **Enhanced Test Suite**: Increased from 43 to 84 passing tests
+- ✅ **Improved Coverage**: Boosted overall coverage from 19.8% to 26.2%
+- ✅ **GitHub Actions**: Updated to use latest, non-deprecated action versions
+- ✅ **CI/CD Pipeline**: Fixed all deprecation warnings and improved reliability
+
+### **Model Test Coverage**
+- **NewsArticleModel**: Complete JSON serialization and entity conversion tests
+- **ProjectModel**: Full coverage of project data handling and validation
+- **TransactionModel**: Comprehensive transaction type and status testing
+- **TokenModel**: Complete token data model testing
+- **WalletModel**: Full wallet data model coverage
+- **UserModel**: Complete user profile model testing
 
 ## 🎯 Project Vision
 
@@ -201,17 +216,20 @@ lib/
 
 The project includes comprehensive test coverage:
 
-- **43 Tests Passing** ✅
-- **Unit Tests**: ViewModel logic and business rules
+- **84 Tests Passing** ✅
+- **Unit Tests**: ViewModel logic, business rules, and data models
 - **Integration Tests**: Provider state management
 - **Widget Tests**: UI component testing
 - **Mock Testing**: Isolated unit testing with Mockito
+- **Model Tests**: Complete coverage of all data models
 
 ### Test Structure
 
 ```
 test/
 ├── viewmodels/     # ViewModel unit tests
+├── models/         # Data model unit tests
+├── entities/       # Entity unit tests
 ├── integration/    # Integration tests
 ├── mocks/         # Mock implementations
 └── helpers/       # Test utilities
@@ -223,7 +241,7 @@ The project provides two types of coverage reports:
 
 1. **Full Coverage Report** (`coverage_report.dart`)
    - Shows coverage for all files in the project
-   - Current: 19.8% overall coverage
+   - Current: 26.2% overall coverage
    - Includes UI components, services, and models
 
 2. **Focused Coverage Report** (`coverage_report_focused.dart`)
@@ -233,6 +251,7 @@ The project provides two types of coverage reports:
    - More meaningful metric for business logic testing
 
 **Coverage Breakdown:**
+- ✅ **Data Models**: 100% coverage (all models fully tested)
 - ✅ **ViewModels**: 70-95% coverage (well tested)
 - ✅ **Use Cases**: 25-100% coverage (core logic tested)
 - ✅ **Core Logic**: Well covered
@@ -384,6 +403,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Ecosystem project explorer
 - [x] Responsive UI design
 - [x] Comprehensive testing suite
+- [x] Complete data model test coverage
+- [x] Enhanced CI/CD pipeline
 
 ### **Phase 2: Enhanced Features** 🚧 (In Progress)
 - [ ] Advanced DeFi integrations
