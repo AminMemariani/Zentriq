@@ -1,4 +1,4 @@
-# Zentriq 🚀
+# Zentriq
 
 [![Tests](https://img.shields.io/badge/tests-117%20passing-brightgreen)](https://github.com/AminMemariani/Zentriq)
 [![Coverage](https://img.shields.io/badge/coverage-26.2%25-red)](https://github.com/AminMemariani/Zentriq)
