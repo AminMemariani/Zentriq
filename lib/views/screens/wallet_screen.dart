@@ -279,7 +279,7 @@ class _WalletScreenState extends State<WalletScreen> {
         children: [
           CircleAvatar(
             radius: DesignSystem.iconSizeXL / 2,
-            backgroundColor: color.withOpacity(0.1),
+            backgroundColor: color.withValues(alpha: 0.1),
             child: FaIcon(icon, color: color, size: DesignSystem.iconSizeL),
           ),
           const SizedBox(height: DesignSystem.spacingM),
@@ -373,7 +373,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
     return ListTile(
       leading: CircleAvatar(
-        backgroundColor: color.withOpacity(0.1),
+        backgroundColor: color.withValues(alpha: 0.1),
         child: Icon(icon, color: color, size: 20),
       ),
       title: Text(

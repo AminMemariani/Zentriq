@@ -3,15 +3,6 @@ import 'package:zentriq/domain/entities/user.dart';
 
 void main() {
   group('User', () {
-    const testUser = User(
-      id: '1',
-      name: 'John Doe',
-      email: 'john@example.com',
-      avatar: 'https://example.com/avatar.jpg',
-      createdAt: null,
-      updatedAt: null,
-    );
-
     test('should create User with all properties', () {
       // Arrange & Act
       const user = User(

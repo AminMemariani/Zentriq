@@ -110,7 +110,7 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -206,9 +206,9 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.red.withOpacity(0.1),
+                color: Colors.red.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: Colors.red.withOpacity(0.3)),
+                border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
               ),
               child: Row(
                 children: [
@@ -286,10 +286,10 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
                   vertical: 6,
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withOpacity(0.1),
+                  color: AppColors.primary.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(
-                    color: AppColors.primary.withOpacity(0.3),
+                    color: AppColors.primary.withValues(alpha: 0.3),
                   ),
                 ),
                 child: Column(
@@ -357,9 +357,12 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
 
   /// Shows the send NFT dialog
   void _showSendDialog(BuildContext context, nft, NftViewModel viewModel) {
+    final navigator = Navigator.of(context);
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+    
     showDialog(
       context: context,
-      builder: (context) => SendNftDialog(
+      builder: (dialogContext) => SendNftDialog(
         nft: nft,
         onSend: (toAddress, note) async {
           final success = await viewModel.sendNftToAddress(
@@ -369,16 +372,16 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
           );
 
           if (success && mounted) {
-            Navigator.of(context).pop(); // Close dialog
-            Navigator.of(context).pop(); // Close detail screen
-            ScaffoldMessenger.of(context).showSnackBar(
+            Navigator.of(dialogContext).pop(); // Close dialog
+            navigator.pop(); // Close detail screen
+            scaffoldMessenger.showSnackBar(
               const SnackBar(
                 content: Text('NFT sent successfully!'),
                 backgroundColor: Colors.green,
               ),
             );
           } else if (mounted) {
-            ScaffoldMessenger.of(context).showSnackBar(
+            scaffoldMessenger.showSnackBar(
               SnackBar(
                 content: Text(viewModel.error ?? 'Failed to send NFT'),
                 backgroundColor: Colors.red,

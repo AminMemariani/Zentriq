@@ -3,7 +3,6 @@ import '../domain/entities/nft.dart';
 import '../domain/usecases/get_all_nfts.dart';
 import '../domain/usecases/send_nft.dart';
 import '../domain/usecases/update_nft_visibility.dart';
-import '../core/utils/result.dart';
 import '../core/utils/use_case.dart';
 
 /// ViewModel for NFT management

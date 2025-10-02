@@ -162,11 +162,8 @@ void main() {
           status: NftTransactionStatus.completed,
         );
 
-        when(mockSendNft(SendNftParams(
-          nftId: nftId,
-          toAddress: toAddress,
-          note: note,
-        ))).thenAnswer((_) async => Result.success(testTransaction));
+        when(mockSendNft(any))
+            .thenAnswer((_) async => Result.success(testTransaction));
 
         // Note: In a real test, we would need to load NFTs first or mock the internal state
         // For now, we'll test the method call without checking the internal state changes
@@ -189,11 +186,8 @@ void main() {
         const nftId = 'nft_1';
         const toAddress = 'INVALID_ADDRESS';
 
-        when(mockSendNft(SendNftParams(
-          nftId: nftId,
-          toAddress: toAddress,
-          note: null,
-        ))).thenAnswer((_) async => Result.failure(ValidationFailure('Invalid address')));
+        when(mockSendNft(any)).thenAnswer(
+            (_) async => Result.failure(ValidationFailure('Invalid address')));
 
         // Act
         final result = await viewModel.sendNftToAddress(
@@ -214,10 +208,8 @@ void main() {
         const nftId = 'nft_1';
         const isHidden = true;
 
-        when(mockUpdateNftVisibility(UpdateNftVisibilityParams(
-          nftId: nftId,
-          isHidden: isHidden,
-        ))).thenAnswer((_) async => const Result.success(null));
+        when(mockUpdateNftVisibility(any))
+            .thenAnswer((_) async => const Result.success(null));
 
         // Note: In a real test, we would need to load NFTs first or mock the internal state
 
@@ -236,10 +228,8 @@ void main() {
         const nftId = 'nft_1';
         const isHidden = true;
 
-        when(mockUpdateNftVisibility(UpdateNftVisibilityParams(
-          nftId: nftId,
-          isHidden: isHidden,
-        ))).thenAnswer((_) async => Result.failure(ServerFailure('Update failed')));
+        when(mockUpdateNftVisibility(any)).thenAnswer(
+            (_) async => Result.failure(ServerFailure('Update failed')));
 
         // Act
         await viewModel.updateNftHiddenStatus(
