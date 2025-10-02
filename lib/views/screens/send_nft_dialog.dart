@@ -84,10 +84,10 @@ class _SendNftDialogState extends State<SendNftDialog> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: AppColors.surfaceVariant.withOpacity(0.3),
+        color: AppColors.surfaceVariant.withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: AppColors.outline.withOpacity(0.3),
+          color: AppColors.outline.withValues(alpha: 0.3),
         ),
       ),
       child: Row(
@@ -186,10 +186,10 @@ class _SendNftDialogState extends State<SendNftDialog> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.orange.withOpacity(0.1),
+        color: Colors.orange.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: Colors.orange.withOpacity(0.3),
+          color: Colors.orange.withValues(alpha: 0.3),
         ),
       ),
       child: Row(
