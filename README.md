@@ -1,8 +1,8 @@
 # Zentriq 🚀
 
-[![Tests](https://img.shields.io/badge/tests-84%20passing-brightgreen)](https://github.com/AminMemariani/Zentriq)
+[![Tests](https://img.shields.io/badge/tests-117%20passing-brightgreen)](https://github.com/AminMemariani/Zentriq)
 [![Coverage](https://img.shields.io/badge/coverage-26.2%25-red)](https://github.com/AminMemariani/Zentriq)
-[![Business Logic Coverage](https://img.shields.io/badge/business%20logic%20coverage-51.7%25-yellow)](https://github.com/AminMemariani/Zentriq)
+[![Business Logic Coverage](https://img.shields.io/badge/business%20logic%20coverage-51.0%25-yellow)](https://github.com/AminMemariani/Zentriq)
 [![Flutter](https://img.shields.io/badge/Flutter-3.24.0-blue)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.5.0-blue)](https://dart.dev)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/AminMemariani/Zentriq/blob/main/LICENSE)
@@ -14,20 +14,26 @@ Built with modern software engineering practices, Zentriq combines clean archite
 
 ## 🆕 Recent Updates
 
-### **Testing & Quality Improvements**
-- ✅ **Comprehensive Model Testing**: Added 100% test coverage for all data models
-- ✅ **Enhanced Test Suite**: Increased from 43 to 84 passing tests
-- ✅ **Improved Coverage**: Boosted overall coverage from 19.8% to 26.2%
-- ✅ **GitHub Actions**: Updated to use latest, non-deprecated action versions
-- ✅ **CI/CD Pipeline**: Fixed all deprecation warnings and improved reliability
+### **NFT Collectibles Feature** 🎨
+- ✅ **NFT Gallery**: Complete NFT collection management with responsive grid layout
+- ✅ **NFT Details**: Comprehensive NFT detail view with metadata, creator info, and transaction history
+- ✅ **Send NFT**: Secure NFT transfer functionality with recipient address validation
+- ✅ **Scam Protection**: Advanced scam detection and filtering system with warning banners
+- ✅ **Smart Filtering**: Automatic categorization of safe vs. suspicious NFTs
+- ✅ **Manual Controls**: User can manually hide/unhide NFTs with persistent preferences
 
-### **Model Test Coverage**
-- **NewsArticleModel**: Complete JSON serialization and entity conversion tests
-- **ProjectModel**: Full coverage of project data handling and validation
-- **TransactionModel**: Comprehensive transaction type and status testing
-- **TokenModel**: Complete token data model testing
-- **WalletModel**: Full wallet data model coverage
-- **UserModel**: Complete user profile model testing
+### **Testing & Quality Improvements**
+- ✅ **Enhanced Test Suite**: Increased from 84 to 117 passing tests
+- ✅ **NFT Testing**: Complete test coverage for NFT functionality and ViewModels
+- ✅ **Code Quality**: Fixed all compilation errors and deprecation warnings
+- ✅ **Coverage Reports**: Standalone coverage reporting scripts for CI/CD integration
+- ✅ **Architecture**: Maintained clean MVVM + Provider architecture for new features
+
+### **Technical Improvements**
+- ✅ **Color System**: Updated color palette with teal accent colors
+- ✅ **Error Handling**: Improved BuildContext usage across async operations
+- ✅ **Code Standards**: Replaced deprecated methods with compatible alternatives
+- ✅ **Performance**: Optimized NFT loading and filtering operations
 
 ## 🎯 Project Vision
 
@@ -73,6 +79,14 @@ Zentriq aims to be the go-to application for Algorand users, providing:
 - **TVL Tracking**: Total Value Locked metrics for DeFi projects
 - **User Activity**: Active user counts and engagement metrics
 - **Launch Calendar**: Track upcoming project launches
+
+### 🎨 **NFT Collectibles**
+- **NFT Gallery**: Browse and manage your Algorand NFT collection
+- **Smart Filtering**: Automatic detection and filtering of suspicious NFTs
+- **Detailed Views**: Comprehensive NFT information with metadata and history
+- **Send NFTs**: Secure NFT transfer with recipient validation
+- **Scam Protection**: Advanced warning system for potentially risky NFTs
+- **Collection Stats**: Overview of safe vs. suspicious NFT counts
 
 ### 📰 **News & Information**
 - **Latest News**: Curated Algorand and crypto news
@@ -184,6 +198,8 @@ lib/
 - **Transaction**: Transaction details and history
 - **Project**: Ecosystem project information
 - **NewsArticle**: News content and metadata
+- **NFT**: NFT collectible data and metadata
+- **NftTransaction**: NFT transaction history and details
 
 #### **Use Cases** (Domain Layer)
 - **GetWallet**: Retrieve wallet information
@@ -192,6 +208,9 @@ lib/
 - **GetTopPerformers**: Get best-performing tokens
 - **GetAllProjects**: Fetch ecosystem projects
 - **GetLatestNews**: Retrieve news articles
+- **GetAllNfts**: Fetch user's NFT collection
+- **SendNft**: Process NFT transfers
+- **UpdateNftVisibility**: Manage NFT visibility preferences
 
 #### **Repositories** (Data Layer)
 - **WalletRepository**: Wallet data operations
@@ -199,29 +218,33 @@ lib/
 - **ProjectRepository**: Ecosystem project data
 - **NewsRepository**: News content management
 - **UserRepository**: User profile management
+- **NftRepository**: NFT collection and transaction data
 
 #### **Services** (Data Layer)
 - **AlgorandBlockchainService**: Blockchain interaction
 - **TokenPricingService**: Market data from CoinGecko
 - **NewsService**: News aggregation from multiple sources
+- **NftService**: NFT data fetching and transaction processing
 
 #### **ViewModels** (Presentation Layer)
 - **WalletViewModel**: Wallet state management
 - **TokenViewModel**: Token portfolio management
 - **EcosystemViewModel**: Project discovery
 - **NewsViewModel**: News feed management
+- **NftViewModel**: NFT collection and management
 - **MainViewModel**: Navigation and app state
 
 ## 🧪 Testing
 
 The project includes comprehensive test coverage:
 
-- **84 Tests Passing** ✅
+- **117 Tests Passing** ✅
 - **Unit Tests**: ViewModel logic, business rules, and data models
 - **Integration Tests**: Provider state management
 - **Widget Tests**: UI component testing
 - **Mock Testing**: Isolated unit testing with Mockito
 - **Model Tests**: Complete coverage of all data models
+- **NFT Tests**: Complete coverage of NFT functionality and ViewModels
 
 ### Test Structure
 
@@ -246,7 +269,7 @@ The project provides two types of coverage reports:
 
 2. **Focused Coverage Report** (`coverage_report_focused.dart`)
    - Shows coverage for business logic only
-   - Current: 51.7% business logic coverage
+   - Current: 51.0% business logic coverage
    - Focuses on ViewModels, Use Cases, and core logic
    - More meaningful metric for business logic testing
 
@@ -407,8 +430,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] Enhanced CI/CD pipeline
 
 ### **Phase 2: Enhanced Features** 🚧 (In Progress)
+- [x] NFT marketplace integration ✅
 - [ ] Advanced DeFi integrations
-- [ ] NFT marketplace integration
 - [ ] Push notifications
 - [ ] Advanced analytics and charts
 - [ ] Multi-language support
