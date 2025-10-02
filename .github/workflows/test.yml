@@ -29,7 +29,51 @@ jobs:
       run: flutter test --coverage
     
     - name: Generate coverage report
-      run: dart run coverage_report.dart
+      run: |
+        echo "Code Coverage Report"
+        echo "==================="
+        
+        # Check if coverage file exists
+        if [ ! -f "coverage/lcov.info" ]; then
+          echo "Coverage file not found"
+          exit 1
+        fi
+        
+        # Extract coverage data using grep and awk
+        TOTAL_LINES=$(grep "^LF:" coverage/lcov.info | awk -F: '{sum += $2} END {print sum}')
+        COVERED_LINES=$(grep "^LH:" coverage/lcov.info | awk -F: '{sum += $2} END {print sum}')
+        
+        if [ "$TOTAL_LINES" -gt 0 ]; then
+          COVERAGE=$(echo "scale=2; $COVERED_LINES * 100 / $TOTAL_LINES" | bc)
+        else
+          COVERAGE=0
+        fi
+        
+        echo "Total Lines: $TOTAL_LINES"
+        echo "Covered Lines: $COVERED_LINES"
+        echo "Coverage: ${COVERAGE}%"
+        
+        # Create coverage badge
+        if (( $(echo "$COVERAGE >= 80" | bc -l) )); then
+          COVERAGE_COLOR="green"
+        elif (( $(echo "$COVERAGE >= 60" | bc -l) )); then
+          COVERAGE_COLOR="yellow"
+        else
+          COVERAGE_COLOR="red"
+        fi
+        
+        BADGE_URL="https://img.shields.io/badge/coverage-${COVERAGE}%25-$COVERAGE_COLOR"
+        echo "Coverage Badge URL: $BADGE_URL"
+        
+        # Set GitHub Actions output
+        echo "coverage=${COVERAGE}" >> $GITHUB_OUTPUT
+        echo "coverage_color=$COVERAGE_COLOR" >> $GITHUB_OUTPUT
+        
+        # Exit with error if coverage is too low
+        if (( $(echo "$COVERAGE < 20" | bc -l) )); then
+          echo "⚠️  Warning: Coverage is below 20%"
+          exit 1
+        fi
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
