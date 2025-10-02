@@ -58,14 +58,14 @@ class AppTheme {
         ),
       ),
 
-      // Card theme
-      cardTheme: const CardThemeData(
-        elevation: 2,
-        margin: EdgeInsets.all(16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(16)),
-        ),
-      ),
+      // Card theme - using default theme
+      // cardTheme: const CardThemeData(
+      //   elevation: 2,
+      //   margin: EdgeInsets.all(16),
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.all(Radius.circular(16)),
+      //   ),
+      // ),
 
       // Elevated button theme
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -110,7 +110,7 @@ class AppTheme {
       // Input decoration theme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.surfaceVariant.withValues(alpha: 0.3),
+        fillColor: AppColors.surfaceVariant.withOpacity(0.3),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColors.outline),
@@ -293,14 +293,14 @@ class AppTheme {
         ),
       ),
 
-      // Card theme
-      cardTheme: const CardThemeData(
-        elevation: 2,
-        margin: EdgeInsets.all(16),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(16)),
-        ),
-      ),
+      // Card theme - using default theme
+      // cardTheme: const CardThemeData(
+      //   elevation: 2,
+      //   margin: EdgeInsets.all(16),
+      //   shape: RoundedRectangleBorder(
+      //     borderRadius: BorderRadius.all(Radius.circular(16)),
+      //   ),
+      // ),
 
       // Elevated button theme
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -345,7 +345,7 @@ class AppTheme {
       // Input decoration theme
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.surfaceVariantDark.withValues(alpha: 0.3),
+        fillColor: AppColors.surfaceVariantDark.withOpacity(0.3),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: AppColors.outlineDark),
