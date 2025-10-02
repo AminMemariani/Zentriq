@@ -1,9 +1,14 @@
 import 'dart:io';
 
+// Custom debugPrint function for standalone Dart scripts
+void debugPrint(String message) {
+  print(message);
+}
+
 void main() {
   final file = File('coverage/lcov.info');
   if (!file.existsSync()) {
-    print('Coverage file not found');
+    debugPrint('Coverage file not found');
     exit(1);
   }
 
@@ -34,15 +39,15 @@ void main() {
 
   final coverage = totalLines > 0 ? (coveredLines / totalLines * 100) : 0.0;
   
-  print('Code Coverage Report');
-  print('===================');
-  print('Total Lines: $totalLines');
-  print('Covered Lines: $coveredLines');
-  print('Coverage: ${coverage.toStringAsFixed(2)}%');
+  debugPrint('Code Coverage Report');
+  debugPrint('===================');
+  debugPrint('Total Lines: $totalLines');
+  debugPrint('Covered Lines: $coveredLines');
+  debugPrint('Coverage: ${coverage.toStringAsFixed(2)}%');
   
   // Coverage by file
-  print('\nCoverage by File:');
-  print('-----------------');
+  debugPrint('\nCoverage by File:');
+  debugPrint('-----------------');
   fileCoverage.forEach((file, stats) {
     final fileCoveragePercent = stats['total']! > 0 
         ? (stats['covered']! / stats['total']! * 100) 
@@ -50,13 +55,14 @@ void main() {
     final status = fileCoveragePercent >= 80 ? '✅' 
         : fileCoveragePercent >= 60 ? '⚠️' 
         : '❌';
-    print('$status ${file.split('/').last}: ${fileCoveragePercent.toStringAsFixed(1)}% (${stats['covered']}/${stats['total']})');
+    debugPrint(
+        '$status ${file.split('/').last}: ${fileCoveragePercent.toStringAsFixed(1)}% (${stats['covered']}/${stats['total']})');
   });
   
   // Create coverage badge
   final coverageColor = coverage >= 80 ? 'green' : coverage >= 60 ? 'yellow' : 'red';
   final badgeUrl = 'https://img.shields.io/badge/coverage-${coverage.toStringAsFixed(1)}%25-$coverageColor';
-  print('\nCoverage Badge URL: $badgeUrl');
+  debugPrint('\nCoverage Badge URL: $badgeUrl');
   
   // GitHub Actions output
   if (Platform.environment.containsKey('GITHUB_ACTIONS')) {
@@ -71,7 +77,7 @@ void main() {
   
   // Exit with error if coverage is too low
   if (coverage < 20) {
-    print('\n⚠️  Warning: Coverage is below 20%');
+    debugPrint('\n⚠️  Warning: Coverage is below 20%');
     exit(1);
   }
 }
