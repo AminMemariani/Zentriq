@@ -74,8 +74,15 @@ void main() {
   
   // GitHub Actions output
   if (Platform.environment.containsKey('GITHUB_ACTIONS')) {
-    print('::set-output name=business_logic_coverage::${coverage.toStringAsFixed(2)}');
-    print('::set-output name=business_logic_coverage_color::$coverageColor');
+    final githubOutput = Platform.environment['GITHUB_OUTPUT'];
+    if (githubOutput != null) {
+      final outputFile = File(githubOutput);
+      outputFile.writeAsStringSync(
+          'business_logic_coverage=${coverage.toStringAsFixed(2)}\n');
+      outputFile.writeAsStringSync(
+          'business_logic_coverage_color=$coverageColor\n',
+          mode: FileMode.append);
+    }
   }
   
   print('\n📊 Coverage Summary:');

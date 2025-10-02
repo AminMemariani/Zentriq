@@ -60,8 +60,13 @@ void main() {
   
   // GitHub Actions output
   if (Platform.environment.containsKey('GITHUB_ACTIONS')) {
-    print('::set-output name=coverage::${coverage.toStringAsFixed(2)}');
-    print('::set-output name=coverage_color::$coverageColor');
+    final githubOutput = Platform.environment['GITHUB_OUTPUT'];
+    if (githubOutput != null) {
+      final outputFile = File(githubOutput);
+      outputFile.writeAsStringSync('coverage=${coverage.toStringAsFixed(2)}\n');
+      outputFile.writeAsStringSync('coverage_color=$coverageColor\n',
+          mode: FileMode.append);
+    }
   }
   
   // Exit with error if coverage is too low
