@@ -1,6 +1,9 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
+// Custom debugPrint function for standalone Dart scripts
+void debugPrint(String message) {
+  print(message);
+}
 
 void main() {
   final file = File('coverage/lcov.info');
