@@ -51,58 +51,72 @@ class MockWalletRepository extends _i1.Mock implements _i2.WalletRepository {
   }
 
   @override
-  _i3.Future<_i4.Result<_i5.Wallet>> getCurrentWallet() =>
-      (super.noSuchMethod(
-            Invocation.method(#getCurrentWallet, []),
-            returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
-              _i6.dummyValue<_i4.Result<_i5.Wallet>>(
-                this,
-                Invocation.method(#getCurrentWallet, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i5.Wallet>>);
+  _i3.Future<_i4.Result<_i5.Wallet>> getCurrentWallet() => (super.noSuchMethod(
+        Invocation.method(
+          #getCurrentWallet,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
+            _i6.dummyValue<_i4.Result<_i5.Wallet>>(
+          this,
+          Invocation.method(
+            #getCurrentWallet,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i5.Wallet>>);
 
   @override
   _i3.Future<_i4.Result<double>> getWalletBalance(String? address) =>
       (super.noSuchMethod(
-            Invocation.method(#getWalletBalance, [address]),
-            returnValue: _i3.Future<_i4.Result<double>>.value(
-              _i6.dummyValue<_i4.Result<double>>(
-                this,
-                Invocation.method(#getWalletBalance, [address]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<double>>);
+        Invocation.method(
+          #getWalletBalance,
+          [address],
+        ),
+        returnValue: _i3.Future<_i4.Result<double>>.value(
+            _i6.dummyValue<_i4.Result<double>>(
+          this,
+          Invocation.method(
+            #getWalletBalance,
+            [address],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<double>>);
 
   @override
   _i3.Future<_i4.Result<double>> getWalletBalanceUSD(String? address) =>
       (super.noSuchMethod(
-            Invocation.method(#getWalletBalanceUSD, [address]),
-            returnValue: _i3.Future<_i4.Result<double>>.value(
-              _i6.dummyValue<_i4.Result<double>>(
-                this,
-                Invocation.method(#getWalletBalanceUSD, [address]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<double>>);
+        Invocation.method(
+          #getWalletBalanceUSD,
+          [address],
+        ),
+        returnValue: _i3.Future<_i4.Result<double>>.value(
+            _i6.dummyValue<_i4.Result<double>>(
+          this,
+          Invocation.method(
+            #getWalletBalanceUSD,
+            [address],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<double>>);
 
   @override
   _i3.Future<_i4.Result<List<_i7.Transaction>>> getTransactionHistory(
-    String? address,
-  ) =>
+          String? address) =>
       (super.noSuchMethod(
-            Invocation.method(#getTransactionHistory, [address]),
-            returnValue: _i3.Future<_i4.Result<List<_i7.Transaction>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i7.Transaction>>>(
-                this,
-                Invocation.method(#getTransactionHistory, [address]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i7.Transaction>>>);
+        Invocation.method(
+          #getTransactionHistory,
+          [address],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i7.Transaction>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i7.Transaction>>>(
+          this,
+          Invocation.method(
+            #getTransactionHistory,
+            [address],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i7.Transaction>>>);
 
   @override
   _i3.Future<_i4.Result<_i7.Transaction>> sendTransaction({
@@ -111,49 +125,62 @@ class MockWalletRepository extends _i1.Mock implements _i2.WalletRepository {
     String? note,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#sendTransaction, [], {
+        Invocation.method(
+          #sendTransaction,
+          [],
+          {
+            #toAddress: toAddress,
+            #amount: amount,
+            #note: note,
+          },
+        ),
+        returnValue: _i3.Future<_i4.Result<_i7.Transaction>>.value(
+            _i6.dummyValue<_i4.Result<_i7.Transaction>>(
+          this,
+          Invocation.method(
+            #sendTransaction,
+            [],
+            {
               #toAddress: toAddress,
               #amount: amount,
               #note: note,
-            }),
-            returnValue: _i3.Future<_i4.Result<_i7.Transaction>>.value(
-              _i6.dummyValue<_i4.Result<_i7.Transaction>>(
-                this,
-                Invocation.method(#sendTransaction, [], {
-                  #toAddress: toAddress,
-                  #amount: amount,
-                  #note: note,
-                }),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i7.Transaction>>);
+            },
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i7.Transaction>>);
 
   @override
-  _i3.Future<_i4.Result<String>> generateNewAddress() =>
-      (super.noSuchMethod(
-            Invocation.method(#generateNewAddress, []),
-            returnValue: _i3.Future<_i4.Result<String>>.value(
-              _i6.dummyValue<_i4.Result<String>>(
-                this,
-                Invocation.method(#generateNewAddress, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<String>>);
+  _i3.Future<_i4.Result<String>> generateNewAddress() => (super.noSuchMethod(
+        Invocation.method(
+          #generateNewAddress,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<String>>.value(
+            _i6.dummyValue<_i4.Result<String>>(
+          this,
+          Invocation.method(
+            #generateNewAddress,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<String>>);
 
   @override
   _i3.Future<_i4.Result<_i5.Wallet>> refreshWallet(String? address) =>
       (super.noSuchMethod(
-            Invocation.method(#refreshWallet, [address]),
-            returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
-              _i6.dummyValue<_i4.Result<_i5.Wallet>>(
-                this,
-                Invocation.method(#refreshWallet, [address]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i5.Wallet>>);
+        Invocation.method(
+          #refreshWallet,
+          [address],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
+            _i6.dummyValue<_i4.Result<_i5.Wallet>>(
+          this,
+          Invocation.method(
+            #refreshWallet,
+            [address],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i5.Wallet>>);
 }
 
 /// A class which mocks [TokenRepository].
@@ -165,99 +192,130 @@ class MockTokenRepository extends _i1.Mock implements _i8.TokenRepository {
   }
 
   @override
-  _i3.Future<_i4.Result<List<_i9.Token>>> getAllTokens() =>
-      (super.noSuchMethod(
-            Invocation.method(#getAllTokens, []),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#getAllTokens, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+  _i3.Future<_i4.Result<List<_i9.Token>>> getAllTokens() => (super.noSuchMethod(
+        Invocation.method(
+          #getAllTokens,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #getAllTokens,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 
   @override
   _i3.Future<_i4.Result<List<_i9.Token>>> getTopPerformers({int? limit = 10}) =>
       (super.noSuchMethod(
-            Invocation.method(#getTopPerformers, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#getTopPerformers, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+        Invocation.method(
+          #getTopPerformers,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #getTopPerformers,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 
   @override
   _i3.Future<_i4.Result<_i9.Token>> getTokenBySymbol(String? symbol) =>
       (super.noSuchMethod(
-            Invocation.method(#getTokenBySymbol, [symbol]),
-            returnValue: _i3.Future<_i4.Result<_i9.Token>>.value(
-              _i6.dummyValue<_i4.Result<_i9.Token>>(
-                this,
-                Invocation.method(#getTokenBySymbol, [symbol]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i9.Token>>);
+        Invocation.method(
+          #getTokenBySymbol,
+          [symbol],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i9.Token>>.value(
+            _i6.dummyValue<_i4.Result<_i9.Token>>(
+          this,
+          Invocation.method(
+            #getTokenBySymbol,
+            [symbol],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i9.Token>>);
 
   @override
   _i3.Future<_i4.Result<_i9.Token>> getTokenById(String? id) =>
       (super.noSuchMethod(
-            Invocation.method(#getTokenById, [id]),
-            returnValue: _i3.Future<_i4.Result<_i9.Token>>.value(
-              _i6.dummyValue<_i4.Result<_i9.Token>>(
-                this,
-                Invocation.method(#getTokenById, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i9.Token>>);
+        Invocation.method(
+          #getTokenById,
+          [id],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i9.Token>>.value(
+            _i6.dummyValue<_i4.Result<_i9.Token>>(
+          this,
+          Invocation.method(
+            #getTokenById,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i9.Token>>);
 
   @override
   _i3.Future<_i4.Result<List<_i9.Token>>> refreshTokens() =>
       (super.noSuchMethod(
-            Invocation.method(#refreshTokens, []),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#refreshTokens, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+        Invocation.method(
+          #refreshTokens,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #refreshTokens,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i9.Token>>> getTokensByMarketCap({
-    int? limit = 50,
-  }) =>
+  _i3.Future<_i4.Result<List<_i9.Token>>> getTokensByMarketCap(
+          {int? limit = 50}) =>
       (super.noSuchMethod(
-            Invocation.method(#getTokensByMarketCap, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#getTokensByMarketCap, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+        Invocation.method(
+          #getTokensByMarketCap,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #getTokensByMarketCap,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i9.Token>>> getTokensByVolume({
-    int? limit = 50,
-  }) =>
+  _i3.Future<_i4.Result<List<_i9.Token>>> getTokensByVolume(
+          {int? limit = 50}) =>
       (super.noSuchMethod(
-            Invocation.method(#getTokensByVolume, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#getTokensByVolume, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+        Invocation.method(
+          #getTokensByVolume,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #getTokensByVolume,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 }
 
 /// A class which mocks [ProjectRepository].
@@ -271,118 +329,148 @@ class MockProjectRepository extends _i1.Mock implements _i10.ProjectRepository {
   @override
   _i3.Future<_i4.Result<List<_i11.Project>>> getAllProjects() =>
       (super.noSuchMethod(
-            Invocation.method(#getAllProjects, []),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#getAllProjects, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #getAllProjects,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #getAllProjects,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
   _i3.Future<_i4.Result<List<_i11.Project>>> getProjectsByCategory(
-    _i11.ProjectCategory? category,
-  ) =>
+          _i11.ProjectCategory? category) =>
       (super.noSuchMethod(
-            Invocation.method(#getProjectsByCategory, [category]),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#getProjectsByCategory, [category]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #getProjectsByCategory,
+          [category],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #getProjectsByCategory,
+            [category],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i11.Project>>> getFeaturedProjects({
-    int? limit = 10,
-  }) =>
+  _i3.Future<_i4.Result<List<_i11.Project>>> getFeaturedProjects(
+          {int? limit = 10}) =>
       (super.noSuchMethod(
-            Invocation.method(#getFeaturedProjects, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#getFeaturedProjects, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #getFeaturedProjects,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #getFeaturedProjects,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i11.Project>>> getRecentlyLaunchedProjects({
-    int? limit = 10,
-  }) =>
+  _i3.Future<_i4.Result<List<_i11.Project>>> getRecentlyLaunchedProjects(
+          {int? limit = 10}) =>
       (super.noSuchMethod(
-            Invocation.method(#getRecentlyLaunchedProjects, [], {
-              #limit: limit,
-            }),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#getRecentlyLaunchedProjects, [], {
-                  #limit: limit,
-                }),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #getRecentlyLaunchedProjects,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #getRecentlyLaunchedProjects,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i11.Project>>> getPopularProjects({
-    int? limit = 10,
-  }) =>
+  _i3.Future<_i4.Result<List<_i11.Project>>> getPopularProjects(
+          {int? limit = 10}) =>
       (super.noSuchMethod(
-            Invocation.method(#getPopularProjects, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#getPopularProjects, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #getPopularProjects,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #getPopularProjects,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
   _i3.Future<_i4.Result<_i11.Project>> getProjectById(String? id) =>
       (super.noSuchMethod(
-            Invocation.method(#getProjectById, [id]),
-            returnValue: _i3.Future<_i4.Result<_i11.Project>>.value(
-              _i6.dummyValue<_i4.Result<_i11.Project>>(
-                this,
-                Invocation.method(#getProjectById, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i11.Project>>);
+        Invocation.method(
+          #getProjectById,
+          [id],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i11.Project>>.value(
+            _i6.dummyValue<_i4.Result<_i11.Project>>(
+          this,
+          Invocation.method(
+            #getProjectById,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i11.Project>>);
 
   @override
   _i3.Future<_i4.Result<List<_i11.Project>>> searchProjects(String? query) =>
       (super.noSuchMethod(
-            Invocation.method(#searchProjects, [query]),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#searchProjects, [query]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #searchProjects,
+          [query],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #searchProjects,
+            [query],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 
   @override
   _i3.Future<_i4.Result<List<_i11.Project>>> refreshProjects() =>
       (super.noSuchMethod(
-            Invocation.method(#refreshProjects, []),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#refreshProjects, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #refreshProjects,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #refreshProjects,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 }
 
 /// A class which mocks [NewsRepository].
@@ -396,45 +484,59 @@ class MockNewsRepository extends _i1.Mock implements _i12.NewsRepository {
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getAllNews() =>
       (super.noSuchMethod(
-            Invocation.method(#getAllNews, []),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#getAllNews, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getAllNews,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getAllNews,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getLatestNews({
-    int? limit = 20,
-  }) =>
+  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getLatestNews(
+          {int? limit = 20}) =>
       (super.noSuchMethod(
-            Invocation.method(#getLatestNews, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#getLatestNews, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getLatestNews,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getLatestNews,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getTrendingNews({
-    int? limit = 10,
-  }) =>
+  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getTrendingNews(
+          {int? limit = 10}) =>
       (super.noSuchMethod(
-            Invocation.method(#getTrendingNews, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#getTrendingNews, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getTrendingNews,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getTrendingNews,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getNewsByCategory(
@@ -442,47 +544,58 @@ class MockNewsRepository extends _i1.Mock implements _i12.NewsRepository {
     int? limit = 20,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#getNewsByCategory, [category], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(
-                  #getNewsByCategory,
-                  [category],
-                  {#limit: limit},
-                ),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getNewsByCategory,
+          [category],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getNewsByCategory,
+            [category],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
-  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getBreakingNews({
-    int? limit = 5,
-  }) =>
+  _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getBreakingNews(
+          {int? limit = 5}) =>
       (super.noSuchMethod(
-            Invocation.method(#getBreakingNews, [], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#getBreakingNews, [], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getBreakingNews,
+          [],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getBreakingNews,
+            [],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
   _i3.Future<_i4.Result<_i13.NewsArticle>> getNewsById(String? id) =>
       (super.noSuchMethod(
-            Invocation.method(#getNewsById, [id]),
-            returnValue: _i3.Future<_i4.Result<_i13.NewsArticle>>.value(
-              _i6.dummyValue<_i4.Result<_i13.NewsArticle>>(
-                this,
-                Invocation.method(#getNewsById, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i13.NewsArticle>>);
+        Invocation.method(
+          #getNewsById,
+          [id],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i13.NewsArticle>>.value(
+            _i6.dummyValue<_i4.Result<_i13.NewsArticle>>(
+          this,
+          Invocation.method(
+            #getNewsById,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i13.NewsArticle>>);
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> searchNews(
@@ -490,80 +603,104 @@ class MockNewsRepository extends _i1.Mock implements _i12.NewsRepository {
     int? limit = 20,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#searchNews, [query], {#limit: limit}),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#searchNews, [query], {#limit: limit}),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #searchNews,
+          [query],
+          {#limit: limit},
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #searchNews,
+            [query],
+            {#limit: limit},
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> getBookmarkedNews() =>
       (super.noSuchMethod(
-            Invocation.method(#getBookmarkedNews, []),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#getBookmarkedNews, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #getBookmarkedNews,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #getBookmarkedNews,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 
   @override
-  _i3.Future<_i4.Result<void>> bookmarkNews(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#bookmarkNews, [id]),
-            returnValue: _i3.Future<_i4.Result<void>>.value(
-              _i6.dummyValue<_i4.Result<void>>(
-                this,
-                Invocation.method(#bookmarkNews, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<void>>);
+  _i3.Future<_i4.Result<void>> bookmarkNews(String? id) => (super.noSuchMethod(
+        Invocation.method(
+          #bookmarkNews,
+          [id],
+        ),
+        returnValue:
+            _i3.Future<_i4.Result<void>>.value(_i6.dummyValue<_i4.Result<void>>(
+          this,
+          Invocation.method(
+            #bookmarkNews,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<void>>);
 
   @override
   _i3.Future<_i4.Result<void>> removeBookmark(String? id) =>
       (super.noSuchMethod(
-            Invocation.method(#removeBookmark, [id]),
-            returnValue: _i3.Future<_i4.Result<void>>.value(
-              _i6.dummyValue<_i4.Result<void>>(
-                this,
-                Invocation.method(#removeBookmark, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<void>>);
+        Invocation.method(
+          #removeBookmark,
+          [id],
+        ),
+        returnValue:
+            _i3.Future<_i4.Result<void>>.value(_i6.dummyValue<_i4.Result<void>>(
+          this,
+          Invocation.method(
+            #removeBookmark,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<void>>);
 
   @override
-  _i3.Future<_i4.Result<void>> markAsRead(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#markAsRead, [id]),
-            returnValue: _i3.Future<_i4.Result<void>>.value(
-              _i6.dummyValue<_i4.Result<void>>(
-                this,
-                Invocation.method(#markAsRead, [id]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<void>>);
+  _i3.Future<_i4.Result<void>> markAsRead(String? id) => (super.noSuchMethod(
+        Invocation.method(
+          #markAsRead,
+          [id],
+        ),
+        returnValue:
+            _i3.Future<_i4.Result<void>>.value(_i6.dummyValue<_i4.Result<void>>(
+          this,
+          Invocation.method(
+            #markAsRead,
+            [id],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<void>>);
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> refreshNews() =>
       (super.noSuchMethod(
-            Invocation.method(#refreshNews, []),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#refreshNews, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #refreshNews,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #refreshNews,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 }
 
 /// A class which mocks [GetWallet].
@@ -575,17 +712,20 @@ class MockGetWallet extends _i1.Mock implements _i14.GetWallet {
   }
 
   @override
-  _i3.Future<_i4.Result<_i5.Wallet>> call() =>
-      (super.noSuchMethod(
-            Invocation.method(#call, []),
-            returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
-              _i6.dummyValue<_i4.Result<_i5.Wallet>>(
-                this,
-                Invocation.method(#call, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i5.Wallet>>);
+  _i3.Future<_i4.Result<_i5.Wallet>> call() => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i5.Wallet>>.value(
+            _i6.dummyValue<_i4.Result<_i5.Wallet>>(
+          this,
+          Invocation.method(
+            #call,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i5.Wallet>>);
 }
 
 /// A class which mocks [GetTransactionHistory].
@@ -600,15 +740,19 @@ class MockGetTransactionHistory extends _i1.Mock
   @override
   _i3.Future<_i4.Result<List<_i7.Transaction>>> call(String? address) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [address]),
-            returnValue: _i3.Future<_i4.Result<List<_i7.Transaction>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i7.Transaction>>>(
-                this,
-                Invocation.method(#call, [address]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i7.Transaction>>>);
+        Invocation.method(
+          #call,
+          [address],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i7.Transaction>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i7.Transaction>>>(
+          this,
+          Invocation.method(
+            #call,
+            [address],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i7.Transaction>>>);
 }
 
 /// A class which mocks [SendTransaction].
@@ -621,18 +765,21 @@ class MockSendTransaction extends _i1.Mock implements _i16.SendTransaction {
 
   @override
   _i3.Future<_i4.Result<_i7.Transaction>> call(
-    _i16.SendTransactionParams? params,
-  ) =>
+          _i16.SendTransactionParams? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i3.Future<_i4.Result<_i7.Transaction>>.value(
-              _i6.dummyValue<_i4.Result<_i7.Transaction>>(
-                this,
-                Invocation.method(#call, [params]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<_i7.Transaction>>);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i3.Future<_i4.Result<_i7.Transaction>>.value(
+            _i6.dummyValue<_i4.Result<_i7.Transaction>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<_i7.Transaction>>);
 }
 
 /// A class which mocks [GetAllTokens].
@@ -644,17 +791,20 @@ class MockGetAllTokens extends _i1.Mock implements _i17.GetAllTokens {
   }
 
   @override
-  _i3.Future<_i4.Result<List<_i9.Token>>> call() =>
-      (super.noSuchMethod(
-            Invocation.method(#call, []),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#call, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+  _i3.Future<_i4.Result<List<_i9.Token>>> call() => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #call,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 }
 
 /// A class which mocks [GetTopPerformers].
@@ -667,18 +817,21 @@ class MockGetTopPerformers extends _i1.Mock implements _i18.GetTopPerformers {
 
   @override
   _i3.Future<_i4.Result<List<_i9.Token>>> call(
-    _i18.GetTopPerformersParams? params,
-  ) =>
+          _i18.GetTopPerformersParams? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
-                this,
-                Invocation.method(#call, [params]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i9.Token>>>);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i9.Token>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i9.Token>>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i9.Token>>>);
 }
 
 /// A class which mocks [GetAllProjects].
@@ -690,17 +843,20 @@ class MockGetAllProjects extends _i1.Mock implements _i19.GetAllProjects {
   }
 
   @override
-  _i3.Future<_i4.Result<List<_i11.Project>>> call() =>
-      (super.noSuchMethod(
-            Invocation.method(#call, []),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#call, []),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+  _i3.Future<_i4.Result<List<_i11.Project>>> call() => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #call,
+            [],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 }
 
 /// A class which mocks [GetFeaturedProjects].
@@ -714,18 +870,21 @@ class MockGetFeaturedProjects extends _i1.Mock
 
   @override
   _i3.Future<_i4.Result<List<_i11.Project>>> call(
-    _i20.GetFeaturedProjectsParams? params,
-  ) =>
+          _i20.GetFeaturedProjectsParams? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
-                this,
-                Invocation.method(#call, [params]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i11.Project>>>);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i11.Project>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i11.Project>>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i11.Project>>>);
 }
 
 /// A class which mocks [GetLatestNews].
@@ -738,18 +897,21 @@ class MockGetLatestNews extends _i1.Mock implements _i21.GetLatestNews {
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> call(
-    _i21.GetLatestNewsParams? params,
-  ) =>
+          _i21.GetLatestNewsParams? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#call, [params]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 }
 
 /// A class which mocks [GetTrendingNews].
@@ -762,16 +924,19 @@ class MockGetTrendingNews extends _i1.Mock implements _i22.GetTrendingNews {
 
   @override
   _i3.Future<_i4.Result<List<_i13.NewsArticle>>> call(
-    _i22.GetTrendingNewsParams? params,
-  ) =>
+          _i22.GetTrendingNewsParams? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
-              _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
-                this,
-                Invocation.method(#call, [params]),
-              ),
-            ),
-          )
-          as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i3.Future<_i4.Result<List<_i13.NewsArticle>>>.value(
+            _i6.dummyValue<_i4.Result<List<_i13.NewsArticle>>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        )),
+      ) as _i3.Future<_i4.Result<List<_i13.NewsArticle>>>);
 }

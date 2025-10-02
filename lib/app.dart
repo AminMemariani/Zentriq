@@ -10,14 +10,17 @@ import 'viewmodels/wallet_viewmodel.dart';
 import 'viewmodels/token_viewmodel.dart';
 import 'viewmodels/ecosystem_viewmodel.dart';
 import 'viewmodels/news_viewmodel.dart';
+import 'viewmodels/nft_viewmodel.dart';
 import 'data/repositories/user_repository_impl.dart';
 import 'data/repositories/wallet_repository_impl.dart';
 import 'data/repositories/token_repository_impl.dart';
 import 'data/repositories/project_repository_impl.dart';
 import 'data/repositories/news_repository_impl.dart';
+import 'data/repositories/nft_repository_impl.dart';
 import 'data/services/algorand_blockchain_service.dart';
 import 'data/services/token_pricing_service.dart';
 import 'data/services/news_service.dart';
+import 'data/services/nft_service.dart';
 import 'domain/usecases/get_current_user.dart';
 import 'domain/usecases/get_wallet.dart';
 import 'domain/usecases/get_transaction_history.dart';
@@ -28,11 +31,15 @@ import 'domain/usecases/get_all_projects.dart';
 import 'domain/usecases/get_featured_projects.dart';
 import 'domain/usecases/get_latest_news.dart';
 import 'domain/usecases/get_trending_news.dart';
+import 'domain/usecases/get_all_nfts.dart';
+import 'domain/usecases/send_nft.dart';
+import 'domain/usecases/update_nft_visibility.dart';
 import 'views/screens/wallet_screen.dart';
 import 'views/screens/defi_screen.dart';
 import 'views/screens/ecosystem_screen.dart';
 import 'views/screens/news_screen.dart';
 import 'views/screens/tokens_screen.dart';
+import 'views/screens/nft_screen.dart';
 import 'views/widgets/bottom_navigation_bar.dart';
 
 /// Main application widget with MVVM architecture and navigation
@@ -58,6 +65,9 @@ class ZentriqApp extends StatelessWidget {
           create: (_) => const ProjectRepositoryImpl(),
         ),
         Provider<NewsRepositoryImpl>(create: (_) => const NewsRepositoryImpl()),
+        Provider<NftRepositoryImpl>(
+          create: (_) => NftRepositoryImpl(nftService: NftService()),
+        ),
 
         // Service providers
         Provider<AlgorandBlockchainService>(
@@ -112,6 +122,15 @@ class ZentriqApp extends StatelessWidget {
         ProxyProvider<NewsRepositoryImpl, GetTrendingNews>(
           update: (_, repository, __) => GetTrendingNews(repository),
         ),
+        ProxyProvider<NftRepositoryImpl, GetAllNfts>(
+          update: (_, repository, __) => GetAllNfts(repository),
+        ),
+        ProxyProvider<NftRepositoryImpl, SendNft>(
+          update: (_, repository, __) => SendNft(repository),
+        ),
+        ProxyProvider<NftRepositoryImpl, UpdateNftVisibility>(
+          update: (_, repository, __) => UpdateNftVisibility(repository),
+        ),
 
         // ViewModel providers
         ChangeNotifierProvider<UserViewModel>(
@@ -140,6 +159,13 @@ class ZentriqApp extends StatelessWidget {
           create: (context) => NewsViewModel(
             context.read<GetLatestNews>(),
             context.read<GetTrendingNews>(),
+          ),
+        ),
+        ChangeNotifierProvider<NftViewModel>(
+          create: (context) => NftViewModel(
+            getAllNfts: context.read<GetAllNfts>(),
+            sendNft: context.read<SendNft>(),
+            updateNftVisibility: context.read<UpdateNftVisibility>(),
           ),
         ),
       ],
@@ -176,6 +202,8 @@ class ZentriqApp extends StatelessWidget {
         return MaterialPageRoute(builder: (_) => const NewsScreen());
       case NavigationConstants.tokens:
         return MaterialPageRoute(builder: (_) => const TokensScreen());
+      case NavigationConstants.nft:
+        return MaterialPageRoute(builder: (_) => const NftScreen());
       default:
         return MaterialPageRoute(builder: (_) => const MainNavigationScreen());
     }
@@ -211,6 +239,8 @@ class MainNavigationScreen extends StatelessWidget {
         return const NewsScreen();
       case AppPage.tokens:
         return const TokensScreen();
+      case AppPage.nft:
+        return const NftScreen();
     }
   }
 }

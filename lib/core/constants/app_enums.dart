@@ -1,5 +1,5 @@
 /// App enums for type safety
-enum AppPage { wallet, defi, ecosystem, news, tokens }
+enum AppPage { wallet, defi, ecosystem, news, tokens, nft }
 
 /// Extension methods for AppPage enum
 extension AppPageExtension on AppPage {
@@ -16,6 +16,8 @@ extension AppPageExtension on AppPage {
         return 3;
       case AppPage.tokens:
         return 4;
+      case AppPage.nft:
+        return 5;
     }
   }
 
@@ -32,6 +34,8 @@ extension AppPageExtension on AppPage {
         return 'News';
       case AppPage.tokens:
         return 'Tokens';
+      case AppPage.nft:
+        return 'NFTs';
     }
   }
 
@@ -48,6 +52,8 @@ extension AppPageExtension on AppPage {
         return '/news';
       case AppPage.tokens:
         return '/tokens';
+      case AppPage.nft:
+        return '/nft';
     }
   }
 
@@ -64,6 +70,8 @@ extension AppPageExtension on AppPage {
         return 'newspaper';
       case AppPage.tokens:
         return 'token';
+      case AppPage.nft:
+        return 'image';
     }
   }
 }

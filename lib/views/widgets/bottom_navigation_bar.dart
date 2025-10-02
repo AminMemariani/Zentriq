@@ -42,6 +42,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
         return FontAwesomeIcons.newspaper;
       case 'token':
         return FontAwesomeIcons.coins;
+      case 'image':
+        return FontAwesomeIcons.image;
       default:
         return FontAwesomeIcons.circle;
     }

@@ -10,6 +10,7 @@ class NavigationConstants {
   static const String ecosystem = '/ecosystem';
   static const String news = '/news';
   static const String tokens = '/tokens';
+  static const String nft = '/nft';
 
   // Bottom navigation bar indices
   static const int walletIndex = 0;
@@ -17,6 +18,7 @@ class NavigationConstants {
   static const int ecosystemIndex = 2;
   static const int newsIndex = 3;
   static const int tokensIndex = 4;
+  static const int nftIndex = 5;
 
   // Page titles
   static const String walletTitle = 'Wallet';
@@ -24,4 +26,5 @@ class NavigationConstants {
   static const String ecosystemTitle = 'Ecosystem';
   static const String newsTitle = 'News';
   static const String tokensTitle = 'Tokens';
+  static const String nftTitle = 'NFTs';
 }
