@@ -131,7 +131,7 @@ class _NftScreenState extends State<NftScreen> {
           _buildStatCard(
             'Safe',
             viewModel.safeNftCount.toString(),
-            Colors.green,
+            Colors.teal,
           ),
           const SizedBox(width: 12),
           _buildStatCard(

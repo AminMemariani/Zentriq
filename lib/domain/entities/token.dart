@@ -79,7 +79,7 @@ class Token extends Equatable {
   /// Returns true if price change is positive
   bool get isPositiveChange => priceChangePercentage24h >= 0;
 
-  /// Returns color for price change (green for positive, red for negative)
+  /// Returns color for price change (teal for positive, red for negative)
   String get changeColor => isPositiveChange ? 'positive' : 'negative';
 
   /// Returns formatted last updated time

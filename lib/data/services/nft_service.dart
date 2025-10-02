@@ -155,7 +155,7 @@ class NftService {
         mintDate: DateTime.now().subtract(Duration(days: random.nextInt(365))),
         attributes: {
           'rarity': ['Common', 'Rare', 'Epic', 'Legendary'][random.nextInt(4)],
-          'color': ['Red', 'Blue', 'Green', 'Purple', 'Gold'][random.nextInt(5)],
+          'color': ['Red', 'Blue', 'Teal', 'Purple', 'Gold'][random.nextInt(5)],
           'power': random.nextInt(100),
         },
         externalUrl: 'https://example.com/nft/$i',

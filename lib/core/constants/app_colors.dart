@@ -17,7 +17,7 @@ class AppColors {
   static const Color secondaryContainer = Color(0xFFE8DEF8);
   static const Color onSecondaryContainer = Color(0xFF1D192B);
 
-  // Tertiary color palette - Accent green
+  // Tertiary color palette - Accent teal
   static const Color tertiary = Color(0xFF7D5260);
   static const Color onTertiary = Color(0xFFFFFFFF);
   static const Color tertiaryContainer = Color(0xFFFFD8E4);

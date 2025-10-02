@@ -362,34 +362,43 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
     
     showDialog(
       context: context,
-      builder: (dialogContext) => SendNftDialog(
-        nft: nft,
-        onSend: (toAddress, note) async {
-          final success = await viewModel.sendNftToAddress(
-            nftId: nft.id,
-            toAddress: toAddress,
-            note: note,
-          );
+      builder: (dialogContext) {
+        final dialogNavigator = Navigator.of(dialogContext);
 
-          if (success && mounted) {
-            Navigator.of(dialogContext).pop(); // Close dialog
-            navigator.pop(); // Close detail screen
-            scaffoldMessenger.showSnackBar(
-              const SnackBar(
-                content: Text('NFT sent successfully!'),
-                backgroundColor: Colors.green,
-              ),
+        return SendNftDialog(
+          nft: nft,
+          onSend: (toAddress, note) async {
+            final success = await viewModel.sendNftToAddress(
+              nftId: nft.id,
+              toAddress: toAddress,
+              note: note,
             );
-          } else if (mounted) {
-            scaffoldMessenger.showSnackBar(
-              SnackBar(
-                content: Text(viewModel.error ?? 'Failed to send NFT'),
-                backgroundColor: Colors.red,
-              ),
-            );
-          }
-        },
-      ),
+
+            // Use stored navigator references to avoid BuildContext async gaps
+            if (success) {
+              if (dialogNavigator.canPop()) {
+                dialogNavigator.pop(); // Close dialog
+              }
+              if (mounted) {
+                navigator.pop(); // Close detail screen
+                scaffoldMessenger.showSnackBar(
+                  const SnackBar(
+                    content: Text('NFT sent successfully!'),
+                    backgroundColor: Colors.teal,
+                  ),
+                );
+              }
+            } else if (mounted) {
+              scaffoldMessenger.showSnackBar(
+                SnackBar(
+                  content: Text(viewModel.error ?? 'Failed to send NFT'),
+                  backgroundColor: Colors.red,
+                ),
+              );
+            }
+          },
+        );
+      },
     );
   }
 
@@ -413,7 +422,7 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(
                   content: Text('NFT reported successfully'),
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.teal,
                 ),
               );
             },
