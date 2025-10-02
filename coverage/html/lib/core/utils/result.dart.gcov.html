@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2025-10-02 11:15:11</td>
+            <td class="headerValue">2025-10-02 11:23:12</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">-</td>
@@ -65,7 +65,7 @@
 <span id="L3"><span class="lineNum">       3</span>              : </span>
 <span id="L4"><span class="lineNum">       4</span>              : /// A generic result class that can represent either success or failure</span>
 <span id="L5"><span class="lineNum">       5</span>              : sealed class Result&lt;T&gt; extends Equatable {</span>
-<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">          11 :   const Result();</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">          14 :   const Result();</span></span>
 <span id="L7"><span class="lineNum">       7</span>              : </span>
 <span id="L8"><span class="lineNum">       8</span>              :   /// Creates a success result with the given data</span>
 <span id="L9"><span class="lineNum">       9</span>              :   const factory Result.success(T data) = Success&lt;T&gt;;</span>
@@ -129,7 +129,7 @@
 <span id="L67"><span class="lineNum">      67</span>              : </span>
 <span id="L68"><span class="lineNum">      68</span>              : /// Represents a successful result</span>
 <span id="L69"><span class="lineNum">      69</span>              : class Success&lt;T&gt; extends Result&lt;T&gt; {</span>
-<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">          11 :   const Success(this.data);</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">          14 :   const Success(this.data);</span></span>
 <span id="L71"><span class="lineNum">      71</span>              : </span>
 <span id="L72"><span class="lineNum">      72</span>              :   @override</span>
 <span id="L73"><span class="lineNum">      73</span>              :   final T data;</span>
