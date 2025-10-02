@@ -48,7 +48,9 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
                     child: Row(
                       children: [
                         Icon(
-                          nft.isHidden ? Icons.visibility : Icons.visibility_off,
+                          nft.isHidden
+                              ? Icons.visibility
+                              : Icons.visibility_off,
                           size: 20,
                         ),
                         const SizedBox(width: 8),
@@ -359,7 +361,7 @@ class _NftDetailScreenState extends State<NftDetailScreen> {
   void _showSendDialog(BuildContext context, nft, NftViewModel viewModel) {
     final navigator = Navigator.of(context);
     final scaffoldMessenger = ScaffoldMessenger.of(context);
-    
+
     showDialog(
       context: context,
       builder: (dialogContext) {

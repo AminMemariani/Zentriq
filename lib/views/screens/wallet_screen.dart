@@ -179,16 +179,16 @@ class _WalletScreenState extends State<WalletScreen> {
           Text(
             viewModel.wallet?.formattedBalance ?? '0.00 ALGO',
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).colorScheme.primary,
-            ),
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
           ),
           const SizedBox(height: DesignSystem.spacingXS),
           Text(
             viewModel.wallet?.formattedBalanceUSD ?? '\$0.00 USD',
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              color: Theme.of(context).colorScheme.onSurfaceVariant,
-            ),
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
           ),
           const SizedBox(height: DesignSystem.spacingL),
           _buildWalletAddress(context, viewModel),
@@ -344,8 +344,8 @@ class _WalletScreenState extends State<WalletScreen> {
                   Text(
                     'Your transaction history will appear here',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: Theme.of(context).colorScheme.onSurfaceVariant,
-                    ),
+                          color: Theme.of(context).colorScheme.onSurfaceVariant,
+                        ),
                   ),
                 ],
               ),
@@ -386,9 +386,9 @@ class _WalletScreenState extends State<WalletScreen> {
       trailing: Text(
         '$amountPrefix${transaction.formattedAmount}',
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-          color: color,
-          fontWeight: FontWeight.bold,
-        ),
+              color: color,
+              fontWeight: FontWeight.bold,
+            ),
       ),
       onTap: () {
         // TODO: Show transaction details
