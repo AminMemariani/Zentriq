@@ -112,10 +112,6 @@ abstract class BaseViewModel extends ChangeNotifier {
     }
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }
 
 /// Result type for handling success and failure states

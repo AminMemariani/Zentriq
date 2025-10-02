@@ -2,7 +2,7 @@ import 'dart:io';
 
 // Custom debugPrint function for standalone Dart scripts
 void debugPrint(String message) {
-  print(message);
+  debugPrint(message);
 }
 
 void main() {
