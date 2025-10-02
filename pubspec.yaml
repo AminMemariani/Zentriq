@@ -48,7 +48,7 @@ dependencies:
   xml: ^6.4.2
   
   # Font Awesome icons
-  font_awesome_flutter: ^10.7.0
+  font_awesome_flutter: ^10.9.0
 
 dev_dependencies:
   flutter_test:
